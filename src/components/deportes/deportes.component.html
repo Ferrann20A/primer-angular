@@ -28,7 +28,10 @@
     <h1>Ejemplo de numeros con style INLINE</h1>
     <ul>
         <li *ngFor="let num of numeros"
-            [style.color]="num % 2 === 0 ? 'green' : 'red'">
+            [ngClass]="{
+                par:num % 2 === 0,
+                impar:num % 2 === 1
+            }">
             {{num}}
         </li>
     </ul>

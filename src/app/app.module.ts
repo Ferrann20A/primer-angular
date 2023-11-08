@@ -4,16 +4,20 @@ import { AppComponent } from './app.component';
 import { PrimerComponent } from 'src/components/primercomponent/primer.component';
 import { HooksAngular } from 'src/components/hooksangular/hooksangular.component';
 import { DeportesComponent } from 'src/components/deportes/deportes.component';
+import { FormsModule } from '@angular/forms';
+import { FormsBinding } from 'src/components/formsbinding/formsbinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrimerComponent,
     HooksAngular,
-    DeportesComponent
+    DeportesComponent,
+    FormsBinding
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

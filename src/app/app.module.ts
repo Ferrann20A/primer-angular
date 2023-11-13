@@ -7,6 +7,7 @@ import { DeportesComponent } from 'src/components/deportes/deportes.component';
 import { FormsModule } from '@angular/forms';
 import { FormsBinding } from 'src/components/formsbinding/formsbinding.component';
 import { SumarNumeros } from 'src/components/sumarnumeros/sumarnumeros.component';
+import { TablaMultiplicar } from 'src/components/tablamultiplicar/tablamultiplicar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SumarNumeros } from 'src/components/sumarnumeros/sumarnumeros.component
     HooksAngular,
     DeportesComponent,
     FormsBinding,
-    SumarNumeros
+    SumarNumeros,
+    TablaMultiplicar
   ],
   imports: [
     BrowserModule,

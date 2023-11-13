@@ -7,12 +7,19 @@ import {Component, ViewChild, ElementRef} from '@angular/core';
 
 export class TablaMultiplicar{
     @ViewChild("cajanum") cajanum!: ElementRef;
-    getTablaMultiplicar(): String{
-        let num = parseInt(this.cajanum.nativeElement.value);
-        let op = ""
-        for(let i = 1; i >= 10; i++){
-            op += `${num} x ${i} = ${num * i}`;
+    public numeros: Array<number>;
+    public numero!: number;
+    constructor(){
+        this.numeros = new Array<number>();
+    }
+    
+    generarTablaMultiplicar(): void{
+        this.numero = parseInt(this.cajanum.nativeElement.value);
+        let aux = new Array<number>();
+        for(let i = 1; i <= 10; i++){
+            let op = this.numero * i;
+            aux.push(op);
         }
-        return op;
+        this.numeros = aux;
     }
 }
